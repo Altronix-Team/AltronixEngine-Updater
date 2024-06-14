@@ -50,20 +50,20 @@ class Updater
     {
       for (filePath in FileSystem.readDirectory(updateTempPath))
       {
-        if (filePath == "FNF-AE" + gameExtension
-          || filePath.endsWith(".dll")
-          || filePath.endsWith(".ndll")) // TODO: Do something with dll, ndll
-        {
-          if (filePath == "FNF-AE" + gameExtension)
-          {
-            continue;
-          }
-          else
-          {
-            FileSystem.deleteFile(updateTempPath + filePath);
-            continue;
-          }
-        }
+        // if (filePath == "FNF-AE" + gameExtension Don't think we need this now
+        //   || filePath.endsWith(".dll")
+        //   || filePath.endsWith(".ndll")) // TODO: Do something with dll, ndll
+        // {
+        //   if (filePath == "FNF-AE" + gameExtension)
+        //   {
+        //     continue;
+        //   }
+        //   else
+        //   {
+        //     FileSystem.deleteFile(updateTempPath + filePath);
+        //     continue;
+        //   }
+        // }
         if (FileSystem.isDirectory(updateTempPath + filePath + '/'))
         {
           readDir(updateTempPath + filePath + '/');
